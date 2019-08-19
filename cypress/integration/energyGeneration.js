@@ -1,28 +1,23 @@
-context('user story', () => {
+context('Energy generation', () => {
   beforeEach(() => {
-    // Given I am on the ‘New Releases’ page..
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:8080')
   })
 
-  it('display the header the footer and the movies', () => {
-    cy.contains(/NEW RELEASES/i)
-    cy.contains(/home/i)
-    cy.contains(/show more info/i)
-    cy.contains(/exit/i)
+  it('display the header the footer and the data correctly', () => {
+    // display the header and the footer
+    cy.contains(/Energy Generation In The UK/i)
+    cy.contains(/Copyright/i)
 
-    cy.wait(2000)
-    // Then I can see the list of newly released films.
-    cy.get('[data-testid="movie-1"]').should('exist')
-    cy.get('[data-testid="movie-2"]').should('exist')
-    cy.get('[data-testid="movie-3"]').should('exist')
-    cy.get('[data-testid="movie-4"]').should('exist')
-    cy.get('[data-testid="movie-info"]').should('not.exist')
-
-    // Given I have navigated to a particular film, When I click on it..
-    cy.get('[data-testid="movie-1"]').click()
-    cy.wait(2000)
-
-    // Then I can see length, rating, year, country, genre
-    cy.get('[data-testid="movie-info"]').should('exist')
+    cy.wait(1000)
+    // display all the energy sources
+    cy.contains(/biomass/i)
+    cy.contains(/coal/i)
+    cy.contains(/imports/i)
+    cy.contains(/gas/i)
+    cy.contains(/nuclear/i)
+    cy.contains(/other/i)
+    cy.contains(/hydro/i)
+    cy.contains(/solar/i)
+    cy.contains(/wind/i)
   })
 })

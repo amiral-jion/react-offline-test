@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "cd frontend && npm test",
-    "start": "cd frontend && npm run start",
+    "start": "cd frontend && npm start",
     "start-middleware": "cd middleware && npm run start",
     "e2e": "cypress run",
     "e2e:open": "cypress open"
   },
-  "author": "",
+  "author": "Amir Bengherbi",
   "license": "ISC",
   "dependencies": {
     "cypress": "^3.4.1"
