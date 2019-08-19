@@ -59,4 +59,7 @@ module.exports = {
         host,
         contentBase: '/src',
     },
+    node: {
+      fs: 'empty',
+    },
 };
