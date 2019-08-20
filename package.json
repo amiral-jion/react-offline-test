@@ -1,12 +1,13 @@
 {
-  "name": "easeltv",
+  "name": "react-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cd frontend && npm test",
-    "start": "cd frontend && npm start",
+    "start-frontend": "cd frontend && npm start",
     "start-middleware": "cd middleware && npm run start",
+    "start": "npm run start-frontend & npm run start-middleware",
     "e2e": "cypress run",
     "e2e:open": "cypress open"
   },
