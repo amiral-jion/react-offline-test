@@ -15,7 +15,7 @@
   
   * to run the tests, from the main directory: npm test
   * to start the project:
-    - npm run start
+    - npm start
     
   * to run the E2E test: 
     - on headless mode: npm run e2e
